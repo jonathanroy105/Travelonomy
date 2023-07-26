@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body
+			{
+				background-image: url(http://localhost/Mini%20Project/homebg.png);
+				background-color:#003c4d;
+            	background-repeat: no-repeat;
+            	background-attachment: fixed;
+            	background-size: 100% 100%;
+            	background-blend-mode:multiply;
+            	height: 100%; 
+            	width: 100%; 
+            	margin: 0;
+			}
+
+			marquee
+			{
+				background-color: white;
+				color: black;
+				margin: none;
+				font-family: Arial;
+			}
+
+			.slider-holder
+        	{
+            	width: 700px;
+            	height: 450px;
+            	background-color: yellow;
+            	margin-left: auto;
+            	margin-right: auto;
+            	margin-top: 0px;
+            	text-align: center;
+            	overflow: hidden;
+            	box-shadow: 0px 0px 10px black;
+            	border-radius: 7.5px;
+        	}
+       
+        	.image-holder
+        	{
+        	    width: 2100px;
+        	    background-color: #001f41;
+        	    height: 500px;
+        	    clear: both;
+        	    position: relative;
+				transition: left 0.7s;
+				
+        	}
+       
+        	.slider-image
+        	{
+        	    float: left;
+        	    margin: 0px;
+        	    padding: 0px;
+        	    position: relative;
+        	}
+       
+        	#s1:target ~ .image-holder
+        	{
+        	    left: 0px;
+        	}
+       
+        	#s2:target ~ .image-holder
+        	{
+        	    left: -700px;
+        	}
+       
+        	#s3:target ~ .image-holder
+        	{
+        	    left: -1400px;
+        	}
+       	
+        	.button-holder
+        	{
+        	    position: relative;
+        	    top: -80px;
+        	    word-spacing: 10px;
+        	}
+       
+        	.slider-change
+        	{
+        	    display: inline-block;
+        	    height: 12.5px;
+        	    width: 12.5px;
+        	    border-radius: 6px;
+        	    background-color: white;
+        	    box-shadow: 0px 0px 5px black;
+        	}
+
+        	.slider-change:hover
+        	{
+        	    display: inline-block;
+        	    height: 15px;
+        	    width: 15px;
+        	    transition-duration: 0.2s;
+        	    border-radius: 8px;
+        	    box-shadow: 0px 0px 10px black;
+			}
+
+        	img {
+        		width: 700px;
+        	    height: 450px;
+        	}
+        
+		</style>
+	</head>
+
+	<body>
+		<marquee direction="left">
+			<span>LIVE OFFERS: Book a package to LA today and receive free tickets to Universal Studios Hollywood and the Griffith Observatory Hike!</span>
+			<span>LIVE OFFERS: Book at least TWO economy flight tickets today and receive free upgrades to Business Class on all tickets!</span>
+		</marquee>
+		<h1 align="center" style="font-family: system-ui; color: white">TRAVELONOMY</h1>
+		<hr align="center" width="40%" size="3px" noshade="noshade" color="white" />
+		<h4 align="center" style="font-family: system-ui; color: white">Explore the Mirage</h4>
+		<br />
+		
+		<div class="slider-holder">
+        	<span id="s1"></span>
+        	<span id="s2"></span>
+        	<span id="s3"></span>
+
+        	<div class="image-holder">
+            	<a href="http://localhost/Mini%20Project/packages.html#top1"><img src="http://localhost/Mini%20Project/explore_bali.png" class="slider-image" /></a>
+            	<a href="http://localhost/Mini%20Project/packages.html#top2"><img src="http://localhost/Mini%20Project/explore_paris.png" class="slider-image" /></a>
+            	<a href="http://localhost/Mini%20Project/packages.html#top3"><img src="http://localhost/Mini%20Project/explore_la.png" class="slider-image" /></a>
+        	</div>
+
+        	<div class="button-holder">
+            	<a href="#s1" class="slider-change"></a>
+            	<a href="#s2" class="slider-change"></a>
+            	<a href="#s3" class="slider-change"></a>
+        	</div>
+    	</div>
+	</body>
+</html>
